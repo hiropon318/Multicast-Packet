@@ -3,8 +3,8 @@ var news = [
   "Test data 6", "Test data 7", "Test data 8", "Test data 9", "Test data 0"
 ];
 
-const HOST_SENDER = "10.16.10.86";  //Server's IP address
-const HOST_PORT = 64284;            //Server's port
+const HOST_SENDER = "192.168.11.20";    //Server's IP address
+const HOST_PORT = 64284;                //Server's port
 const MULTICAST_ADDRESS = "230.255.192.1";
 
 //Import Datagram library 
