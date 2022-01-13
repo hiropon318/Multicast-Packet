@@ -1,6 +1,7 @@
-const HOST_RECEIVER = "10.200.0.115";
+const HOST_RECEIVER = "192.168.4.2";
 const CLIENT_PORT = 64284;
 const MULTICAST_ADDRESS = "230.255.192.1";
+
 var dgram = require('dgram');
 var client = dgram.createSocket('udp4');
 
@@ -12,7 +13,7 @@ client.on('listening', () => {
 });
 
 client.on('message', (msg, rinfo) => {
-  console.log(msg);
+  console.log(msg.toString());
   console.log(rinfo);
 });
 

@@ -3,7 +3,7 @@ var news = [
   "Test data 6", "Test data 7", "Test data 8", "Test data 9", "Test data 0"
 ];
 
-const HOST_SENDER = "192.168.11.20";    //Server's IP address
+const HOST_SENDER = "192.168.4.2";    //Server's IP address
 const HOST_PORT = 64284;                //Server's port
 const MULTICAST_ADDRESS = "230.255.192.1";
 
@@ -24,7 +24,7 @@ server.bind();
 setInterval(broadcastNew, 1500);
 
 function broadcastNew() {
-  //Math.random creates random number between 0 to 1
+  //Math.random creates random number between 0 and 1
   var message = news[Math.floor(Math.random()*news.length)];
   server.send(message, 0, message.length, HOST_PORT, MULTICAST_ADDRESS);
   console.log("Sent " + message + " to the wire...");
